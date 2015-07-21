@@ -150,7 +150,7 @@ namespace Xunit.Runner.Dnx
             var result = new List<IRunnerReporter>();
 
             foreach (var library in libraryManager.GetReferencingLibraries("xunit.runner.utility"))
-                foreach (var assembly in library.LoadableAssemblies)
+                foreach (var assembly in library.Assemblies)
                 {
                     TypeInfo[] types;
 
